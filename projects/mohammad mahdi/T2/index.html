@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f3f5fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .todo-container {
+            width: 100%;
+            max-width: 480px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #20243a;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #9298aa;
+            font-size: 14px;
+        }
+
+        /* Input Area */
+
+        .input-area {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .input-area input {
+            flex: 1;
+            min-width: 0;
+            padding: 13px;
+            border: 1px solid #e1e4ed;
+            border-radius: 9px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .input-area input:focus {
+            border-color: #6558e8;
+        }
+
+        .add-btn {
+            width: 45px;
+            border: none;
+            border-radius: 9px;
+            background: #6558e8;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        /* Task List */
+
+        .task-list {
+            list-style: none;
+        }
+
+        .task {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f1f5;
+        }
+
+        .task:last-child {
+            border-bottom: none;
+        }
+
+        .task input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #6558e8;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .task-name {
+            flex: 1;
+            color: #34384c;
+            font-size: 14px;
+        }
+
+        /* Completed Task */
+
+        .task input[type="checkbox"]:checked+.task-name {
+            text-decoration: line-through;
+            color: #a8adbb;
+        }
+
+        /* Action Buttons */
+
+        .actions {
+            display: flex;
+            gap: 7px;
+        }
+
+        .edit-btn,
+        .delete-btn {
+            border: none;
+            padding: 7px 9px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            background: #eeedff;
+            color: #6558e8;
+        }
+
+        .delete-btn {
+            background: #fff0f0;
+            color: #e45b5b;
+        }
+
+        /* Footer */
+
+        .footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f1f5;
+            color: #a0a5b3;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        @media (max-width: 400px) {
+            .todo-container {
+                padding: 20px;
+            }
+
+            .edit-btn,
+            .delete-btn {
+                padding: 6px;
+                font-size: 11px;
+            }
+
+            .task {
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="todo-container">
+
+        <div class="header">
+            <h1>My To-Do List</h1>
+            <p>Organize your day, one task at a time.</p>
+        </div>
+
+        <div class="input-area">
+            <input type="text" placeholder="Add a new task..." id="input">
+            <button class="add-btn" id="create">+</button>
+        </div>
+
+        <ul class="task-list" id="list">
+
+        </ul>
+
+        <div class="footer">
+            Stay focused and get things done!
+        </div>
+
+    </div>
+</body>
+<script src="java/java.js"></script>
+</html>
