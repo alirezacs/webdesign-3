@@ -185,6 +185,74 @@ let users = ["Alireza", "Mohammad", "Mobina", "Amirali", "Ayda", "Zeynab", "Farb
 // })
 
 /* Localstorage */
-let username = prompt('Enter Your Username: ')
+// let username = prompt('Enter Your Username: ')
 
 // localStorage.setItem("username", username)
+
+/* BOM in JS */
+// console.log(window.location.pathname);
+
+/* SetTimeout and SetInterval */
+
+// let timeout = setTimeout(() => {
+//     console.log("Log 3");
+// }, 2000);
+
+// document.getElementById('btn').addEventListener('click', () => {
+//     console.log("TEST");
+// })
+
+// let second = 55;
+// let minutes = 0;
+// let interval = setInterval(() => {
+//     second++;
+//     console.log(second);
+// }, 100);
+
+// document.getElementById('btn').addEventListener('click', e => {
+//     clearInterval(interval)
+// })
+
+/* Callback */
+// const printer = value => {
+//     console.log(value);
+//     document.write(value);
+// }
+// const sum = (n1, n2, callback) => {
+//     let sum = n1 + n2;
+//     callback(sum);
+// }
+
+// sum(10, 20, printer);
+
+/* Promise */
+// const getUser = new Promise((resolve, rejected) => {
+//     // Send Request To Server For Get User Information
+
+//     let result = "Succesful";
+
+//     if(result === "Succesfull"){
+//         resolve({ firstName: "", id: 1, email: "" });
+//     }else{
+//         rejected("Error in Connection");
+//     }
+// })
+
+// getUser.then((data) => {
+//     console.log(data);
+// })
+// getUser.catch(error => {
+//     console.log(error);
+// })
+// getUser.finally(() => {
+//     console.log("Request Sent");
+// })
+
+/* Async & Await */
+// const getUser = async () => {
+//     let result = await fetch();
+
+
+// }
+
+
